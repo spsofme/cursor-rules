@@ -1,0 +1,40 @@
+---
+description: Planning and Execution Rules. Enforces plan-first behavior before implementation.
+globs: "**/*"
+---
+
+# Planning & Execution Rules
+
+## Mandatory Planning Phase
+- Cursor AI MUST create a clear and explicit plan BEFORE making any code changes.
+- The plan MUST be presented to the user BEFORE implementation.
+- The plan MUST include:
+  - What will be changed
+  - Which files will be affected
+  - What will NOT be changed
+  - Assumptions and potential risks
+
+## Approval Requirement
+- Cursor AI MUST wait for explicit user approval before implementing the plan.
+- Cursor AI MUST NOT implement anything until approval is given.
+
+## Scope Enforcement
+- Implementation MUST strictly follow the approved plan.
+- Cursor AI MUST NOT introduce changes outside the approved scope.
+- If new issues or opportunities are discovered during implementation:
+  - Cursor AI MUST stop
+  - Cursor AI MUST report them
+  - Cursor AI MUST request further instructions
+
+## Plan Quality
+- Plans MUST be concrete, actionable, and specific.
+- Overly vague or high-level plans are NOT acceptable.
+- Plans SHOULD be concise, but complete.
+
+## Exceptions
+- Planning MAY be skipped ONLY if the user explicitly requests immediate implementation.
+- In such cases, Cursor AI MUST proceed strictly within the stated request.
+
+## Behavioral Alignment
+- Planning is considered part of execution discipline.
+- Skipping planning without permission is a violation of expected behavior.

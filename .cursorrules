@@ -1,0 +1,101 @@
+# Cursor AI Rules
+
+## === AI BEHAVIOR RULES (BINDING) ===
+- The rules in this section are MANDATORY.
+- Cursor AI MUST follow these rules at all times.
+- Cursor AI MUST NOT reorganize files or folders unless explicitly instructed.
+- Cursor AI MUST NOT reorganize files or folders unless explicitly instructed.
+- Cursor AI MAY propose risks or missing components but MUST NOT implement them without approval.
+
+
+### Scope and hierarchy
+- General rules apply globally.
+- More specific rules may extend general rules but MUST NOT contradict them.
+- Conflicting rules are NOT allowed.
+- Exceptions are valid ONLY if explicitly documented.
+
+### Code generation principles
+- Follow existing project structure and conventions.
+- Do NOT refactor unrelated code.
+- Do NOT introduce new abstractions unless explicitly requested.
+- Prefer minimal, focused changes over broad improvements.
+- Modify only what is necessary to fulfill the request.
+- Ask for confirmation before making large or architectural changes.
+
+### Documentation handling
+- Use Markdown for documentation and README files.
+- Maintain the existing structure of documentation unless explicitly instructed otherwise.
+
+---
+
+## === REPOSITORY GUIDELINES (NON-BINDING CONTEXT) ===
+The following section provides repository organization and contribution guidelines.
+These rules are for context and documentation purposes only and DO NOT override AI behavior rules.
+
+## Awesome CursorRules
+A curated collection of .cursorrules files for enhancing the Cursor AI experience.
+
+### General guidelines
+- Always use Markdown for documentation and README files.
+- Maintain the existing structure of the README.md file.
+
+### Base rules
+- All general rules are located in the "general" folder.
+- These rules are mandatory and must be followed in all circumstances.
+- Other .cursorrules files may only extend these rules in a complementary way.
+- Conflicts between rule files are not allowed.
+- Exceptions are valid only if explicitly documented and approved.
+
+### README.md structure
+Maintain the following structure in the README.md file:
+1. Title and Awesome badge  
+2. Logo  
+3. Short description  
+4. "Why .cursorrules?" section  
+5. Table of Contents  
+6. Rules section  
+   - Frontend Frameworks and Libraries  
+   - Backend and Full-Stack  
+   - Mobile Development  
+   - CSS and Styling  
+   - State Management  
+   - Database and API  
+   - Testing  
+   - Build Tools and Development  
+   - Language-Specific  
+   - Other  
+7. How to Use section  
+8. Contributing section  
+9. License section  
+
+### Organization of rules
+- Organize .cursorrules files into clear categories under the `rules` directory.
+- Use descriptive folder and file names that reflect the rule content.
+- Refer to folder-level README files for naming conventions and descriptions.
+
+### Naming and formatting
+- Use descriptive names for .cursorrules files and folders.
+- Maintain alphabetical order within categories where applicable.
+- Use consistent formatting for list items and headings.
+
+### Content guidelines
+- Focus on project-specific instructions and best practices.
+- Include comments to explain complex rules when necessary.
+- Use clear and concise language.
+- Provide context about project structure, architectural decisions, or commonly used patterns.
+
+### Optional README files
+- A .cursorrules file may include an accompanying README.md file.
+- Use this README to give credit to the original author and describe the rule’s purpose.
+
+### Maintenance and updates
+- Update the main README.md when adding or modifying rules.
+- Keep links relative and accurate.
+- Ensure the table of contents remains correct.
+- Review and update categorization as the repository grows.
+
+### Additional notes
+- .cursorrules files are repository-level “Rules for AI”.
+- These rules are appended to Cursor’s global AI rules.
+- Focus on repo-level context, not generic coding advice.
+- Rules may cover both code generation and code understanding.

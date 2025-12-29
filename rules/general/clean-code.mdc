@@ -1,0 +1,50 @@
+---
+description: Clean code guidelines for writing maintainable and human-readable code.
+globs: "**/*"
+---
+
+# Clean Code Guidelines
+
+## Constants Over Magic Numbers
+- Replace hard-coded values with named constants when modifying or adding code.
+- Use descriptive constant names that explain the value's purpose.
+
+## Meaningful Names
+- Use clear and descriptive names for variables, functions, and classes.
+- Avoid abbreviations unless they are universally understood.
+
+## Smart Comments
+- Do NOT comment on obvious behavior.
+- Use comments to explain *why* something is done, not *what* is done.
+- Document complex logic and non-obvious side effects.
+
+## Single Responsibility
+- Keep functions focused on a single responsibility when writing new code.
+- Do NOT split existing functions unless explicitly requested.
+
+## DRY (Don't Repeat Yourself)
+- Avoid introducing new duplication.
+- Extract shared logic ONLY when explicitly requested or clearly necessary.
+
+## Clean Structure
+- Keep related code together.
+- Follow existing file and folder organization.
+- Do NOT reorganize structure unless explicitly instructed.
+
+## Encapsulation
+- Hide implementation details behind clear interfaces.
+- Avoid exposing internal state unnecessarily.
+
+## Code Quality Maintenance
+- Do NOT refactor code unless explicitly requested.
+- Do NOT introduce "cleanup" changes beyond the scope of the request.
+- Focus on correctness over stylistic improvements.
+
+## Testing
+- Write or update tests only when explicitly requested.
+- When writing tests, keep them readable and focused.
+- Cover edge cases relevant to the change.
+
+## Version Control
+- Write clear, concise commit messages when requested.
+- Keep commits focused on a single logical change.

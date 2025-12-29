@@ -1,0 +1,50 @@
+---
+description: Code Quality Guidelines
+globs: "**/*"
+---
+
+# Code Quality Guidelines
+
+## Verify Information
+Always verify information before presenting it. Do NOT speculate or assume without clear evidence.
+
+## File-by-File Changes
+Make changes file by file and allow review before moving to another file.
+
+## No Apologies
+Do NOT use apologies.
+
+## No Understanding Feedback
+Do NOT provide feedback about understanding in comments or documentation.
+
+## No Whitespace Suggestions
+Do NOT suggest whitespace-only changes.
+
+## No Summaries
+Do NOT summarize changes.
+
+## No Inventions
+Do NOT invent changes beyond what is explicitly requested.
+
+## No Unnecessary Confirmations
+Do NOT ask for confirmation of information already provided in the context.
+
+## Preserve Existing Code
+Do NOT remove or alter unrelated code or functionality.
+Preserve existing structure and behavior.
+
+## Single Chunk Edits
+Provide all edits for a file in a single chunk.
+
+## No Implementation Checks
+Do NOT ask the user to verify implementations already visible in the context.
+
+## No Unnecessary Updates
+Do NOT suggest updates when no actual modification is required.
+
+## Real File References
+Provide real file paths only when explicitly known from the context.
+Do NOT invent file paths.
+
+## No Current Implementation Discussion
+Do NOT describe or discuss the current implementation unless explicitly requested.

@@ -1,0 +1,89 @@
+---
+description: React + TypeScript rules for frontend development. Architecture-agnostic, sector-aware, and user-driven.
+globs: src/**/*, app/**/*, **/*.ts, **/*.tsx
+---
+
+# React + TypeScript Rules
+
+## Architecture Selection
+- Cursor AI MUST NOT assume or invent a frontend architecture.
+- When starting a new project, Cursor AI MUST ask which architectural approach should be used.
+- Supported approaches may include (but are not limited to):
+  - Feature-based architecture
+  - Atomic Design
+  - Layered frontend architecture
+  - SPA with centralized state
+  - Micro-frontend
+  - Custom / user-defined structure
+- Cursor AI MUST apply ONLY the architecture explicitly chosen by the user.
+- Do NOT mix architectural styles unless explicitly instructed.
+
+## Project Initialization
+- Cursor AI MAY initialize a React + TypeScript project when explicitly requested.
+- Project structure MUST be derived strictly from the selected architecture.
+- If required folders or layers are missing, Cursor AI SHOULD create them to complete the structure.
+- Cursor AI MUST NOT introduce additional patterns, tools, or abstractions beyond the selected architecture.
+
+## Project Structure
+- Create folders and files according to the selected architecture.
+- Use clear, conventional naming for components, hooks, and modules.
+- Do NOT move or reorganize existing files unless explicitly instructed.
+
+## Components
+- Components MUST be focused and single-responsibility.
+- Prefer function components.
+- Avoid large, monolithic components.
+- Do NOT refactor existing components unless explicitly requested.
+
+## Hooks
+- Custom hooks MUST encapsulate reusable behavior only.
+- Do NOT introduce custom hooks unless explicitly requested.
+- Avoid side effects outside of React lifecycle hooks.
+
+## State Management
+- Use the state management solution explicitly specified by the user.
+- Do NOT introduce new state management libraries unless explicitly requested.
+- Keep state as local as possible unless otherwise instructed.
+- Avoid unnecessary global state.
+
+## Props & Types
+- Props MUST be explicitly typed.
+- Avoid using `any`.
+- Use interfaces or type aliases consistently.
+- Do NOT change existing public component props unless explicitly requested.
+
+## Side Effects & Data Fetching
+- Side effects MUST be handled explicitly.
+- Use the data-fetching approach specified by the user.
+- Do NOT introduce new data-fetching libraries unless explicitly requested.
+- Handle loading and error states explicitly when modifying behavior.
+
+## Styling
+- Cursor AI MUST NOT assume or enforce any styling solution.
+- Styling approach (e.g. Tailwind CSS, CSS Modules, styled-components, design system) MUST be explicitly specified by the user.
+- If no styling approach is specified, Cursor AI MUST ask before proceeding.
+- Do NOT introduce or change styling solutions unless explicitly requested.
+- Do NOT modify existing styles unless explicitly instructed.
+
+## Error Handling
+- Handle UI errors explicitly.
+- Avoid silent failures.
+- Do NOT expose internal errors directly to the UI unless requested.
+
+## Performance
+- Avoid premature optimization.
+- Do NOT introduce memoization, virtualization, or performance optimizations unless explicitly requested.
+
+## Testing
+- Cursor AI MAY create frontend tests when explicitly requested.
+- Follow existing testing tools and conventions.
+- Do NOT add or modify tests unless explicitly instructed.
+
+## Accessibility
+- Follow basic accessibility best practices when writing new UI.
+- Do NOT introduce accessibility refactors unless explicitly requested.
+
+## Code Style
+- Follow existing ESLint / Prettier rules in the project.
+- Do NOT reformat code for style-only reasons.
+- Avoid unnecessary abstractions, patterns, or syntactic cleverness.

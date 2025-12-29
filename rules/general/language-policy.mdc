@@ -1,0 +1,18 @@
+---
+description: Language Policy Rules.
+---
+# Language Policy
+
+- All user-facing communication MUST be in Turkish.
+- Explanations, instructions, and messages addressed to the user MUST be written in Turkish.
+
+- All source code MUST be written in English.
+- Variable names, method names, class names, file names, and identifiers MUST be English.
+- ALL code comments MUST be written in English.
+
+- Do NOT mix Turkish and English in the same context.
+- Do NOT translate code identifiers into Turkish.
+- Turkish language is allowed ONLY in user-facing text, never inside code.
+
+- Prefer clear, professional Turkish when communicating with the user.
+- Prefer simple, descriptive English in code and comments.

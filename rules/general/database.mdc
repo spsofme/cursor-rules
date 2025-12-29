@@ -1,0 +1,72 @@
+---
+description: Database best practices applicable across all database technologies and ORMs
+globs: src/db/**/*, src/database/**/*, **/*.sql, **/*migration*, **/*schema*, **/*ddl*
+---
+
+# Database Best Practices
+
+## General Principles
+- Design schemas deliberately and explicitly.
+- Prefer clarity and correctness over clever optimizations.
+- Do NOT change database structure without a clear migration strategy.
+- Treat database schema as versioned source code.
+- Do NOT modify existing schemas unless explicitly requested.
+- Do NOT introduce soft-delete patterns unless explicitly required.
+
+## Schema & Modeling
+- Use clear, consistent naming for tables, columns, and relations.
+- Define primary keys explicitly.
+- Use foreign keys to enforce relational integrity when supported.
+- Define constraints (NOT NULL, UNIQUE, CHECK) at the database level.
+- Use appropriate data types; avoid overly generic types.
+- Be explicit about ON DELETE and ON UPDATE behaviors for relations.
+
+## Migrations
+- All schema changes MUST be performed via migrations.
+- Migrations MUST be reversible when possible.
+- Do NOT edit applied migrations.
+- Ensure migrations are deterministic and environment-safe.
+- Keep migrations small and focused.
+- Separate schema migrations from data migrations when possible.
+- Test migrations in a non-production environment before applying to production.
+- Prefer idempotent migration patterns where supported.
+
+## Queries & Data Access
+- Avoid N+1 query patterns.
+- Prefer explicit queries over implicit magic.
+- Load only required fields.
+- Use pagination for unbounded result sets.
+- Use transactions for multi-step data operations.
+
+## Indexing & Performance
+- Add indexes intentionally; justify each index.
+- Avoid redundant or unused indexes.
+- Consider read vs write trade-offs when indexing.
+- Monitor slow queries and query execution plans.
+- Avoid premature optimization without evidence.
+
+## Consistency & Transactions
+- Use transactions for operations that must succeed or fail atomically.
+- Be explicit about transaction boundaries.
+- Avoid long-running transactions.
+- Understand isolation levels and their trade-offs.
+
+## Security & Data Safety
+- Never store sensitive data in plain text.
+- Use encryption or hashing where appropriate.
+- Apply least-privilege access for database users.
+- Do NOT expose internal database errors directly to users.
+- Ensure backup and restore strategies exist.
+
+## Error Handling
+- Handle database errors explicitly.
+- Do NOT silently ignore failed operations.
+- Log database errors with sufficient context.
+- Avoid leaking schema or query details in user-facing errors.
+
+## Maintainability
+- Keep database-related code centralized.
+- Document non-obvious schema decisions.
+- Avoid database-specific hacks unless justified.
+- Prefer portable SQL and patterns when possible.
+- Re-evaluate schema decisions as the system evolves.

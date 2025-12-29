@@ -1,0 +1,100 @@
+---
+description: Dynamic .NET API rules for creating and extending backend projects using C#. Architecture-agnostic and user-driven.
+globs: src/**/*, api/**/*, **/*.cs
+---
+
+# .NET API Rules
+
+## Architecture Selection
+- Cursor AI MUST NOT assume or invent an architecture.
+- When starting a new project, Cursor AI MUST ask which architecture or design approach should be used.
+- Supported architectures and approaches may include (but are not limited to):
+  - Clean Architecture
+  - Layered Architecture
+  - Domain-Driven Design (DDD)
+  - Vertical Slice Architecture
+  - Minimal API
+  - Modular Monolith
+  - Custom / User-defined architecture
+- Cursor AI MUST apply ONLY the architecture explicitly chosen by the user.
+- Do NOT mix architectural styles unless explicitly instructed.
+
+## Project Initialization
+- Cursor AI MAY create a project from scratch when explicitly requested.
+- Project structure MUST be derived strictly from the selected architecture.
+- If required layers, modules, or projects are missing, Cursor AI SHOULD create them to complete the chosen architecture.
+- Cursor AI MUST NOT introduce additional layers, patterns, or abstractions beyond the selected architecture.
+- Do NOT refactor or restructure the architecture after initial setup unless explicitly requested.
+
+## Project Structure
+- Create folders, projects, and namespaces according to the selected architecture.
+- Use clear and conventional naming aligned with the chosen structure.
+- Do NOT move files between layers or modules unless explicitly instructed.
+
+## Controllers / Endpoints
+- Endpoint responsibilities MUST follow the selected architecture.
+- Controllers or endpoints MUST NOT contain business logic unless the architecture explicitly allows it.
+- Controllers SHOULD handle only request/response concerns.
+
+## Business Logic Placement
+- Business rules MUST be placed according to the selected architecture:
+  - Application layer
+  - Domain layer
+  - Feature module
+  - Handler / Use case
+- Cursor AI MUST NOT relocate logic across layers without instruction.
+
+## Domain-Driven Design (when selected)
+- Domain models MUST be persistence-agnostic.
+- Entities, Value Objects, Aggregates, and Repositories MUST follow DDD principles.
+- Do NOT introduce ORM-specific attributes into domain models unless explicitly requested.
+- Business invariants SHOULD be enforced inside domain models.
+- Infrastructure concerns MUST NOT leak into the domain layer.
+
+## DTOs & Contracts
+- DTOs are strictly for input and output boundaries.
+- Do NOT mix DTOs with domain or persistence models unless explicitly allowed by the architecture.
+- Preserve existing API contracts once established.
+- Do NOT introduce breaking changes unless explicitly requested.
+
+## Data Access
+- Database or ORM details MUST remain confined to the data access area defined by the architecture.
+- Use async APIs consistently for I/O-bound operations.
+- Do NOT introduce caching, performance optimizations, or raw SQL unless explicitly requested.
+
+## Dependency Injection
+- Register dependencies following the selected architectural style.
+- Use constructor injection unless the architecture specifies otherwise.
+- Do NOT introduce new lifetimes, scopes, or DI patterns unless explicitly requested.
+- Avoid service locator patterns.
+
+## Error Handling
+- Error handling MUST follow the conventions of the selected architecture.
+- Do NOT swallow exceptions.
+- Do NOT expose internal exception details in API responses.
+- Use consistent error response structures where applicable.
+
+## Validation
+- Validation responsibilities MUST align with the architecture.
+- Do NOT introduce new validation frameworks unless explicitly requested.
+- Preserve existing validation behavior.
+
+## Logging
+- Log errors and important state transitions only.
+- Avoid verbose logging.
+- Never log sensitive data.
+
+## Asynchronous Programming
+- Use async/await consistently.
+- Do NOT block asynchronous code (.Result / .Wait).
+- Do NOT introduce concurrency or parallelism unless explicitly requested.
+
+## Testing
+- Cursor AI MAY create tests when explicitly requested.
+- Test structure MUST follow the selected architecture.
+- Do NOT add or modify tests unless explicitly instructed.
+
+## Code Style
+- Follow existing C# coding conventions in the repository.
+- Do NOT reformat code for style-only reasons.
+- Avoid unnecessary language features or syntactic cleverness.
